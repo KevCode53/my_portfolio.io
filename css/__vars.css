@@ -1,0 +1,12 @@
+:root {
+  /* Color variables */
+  --dark: #202020;
+  --white: #f3f3f3;
+  --gray: #9c9990;
+  --lile: #995d81;
+  --yellow: #fde74c;
+  --blue: #006992;
+  /* Screen Variables */
+  max-width: 1200px;
+  min-width: 320px;
+}
