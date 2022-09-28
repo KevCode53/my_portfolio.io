@@ -1,33 +1,425 @@
+/* ------------------------------------ */
+    /* HEADER STYLES FOR NAV BARS */
+/* ------------------------------------ */
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 0 2rem;
+  top: 0;
+  z-index: 10;
+  background-color: var(--dark2);
+  transition: .60s all ease;
+}
+
+.toolbar.blur {
+  backdrop-filter: blur(1rem);
+  background: rgba(255, 255, 255, 0.1);
+  transition: .60s all ease;
+}
+
+.toolbar.blur picture {
+  height: 4rem;
+  border-radius: 100%;
+  background: #131313;
+  transition: .60s all ease;
+  outline: .2rem solid var(--logo-white);
+}
+
+
+.toolbar picture {
+  margin-right: auto;
+  position: relative;
+  border-radius: 100%;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  transition: .60s all ease;
+}
+
+.toolbar picture img { 
+  width: 100%;
+}
+
+
+/* .toolbar picture .hexagon {
+  height: 3.8rem;
+  width: 2.2rem;
+  top: .1rem;
+  background: var(--grey);
+  position: absolute;
+  z-index: -1;
+}
+
+.toolbar picture .hexagon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  width: 0;
+  height: 0;
+  border-right: 1rem solid var(--grey);
+  border-top: 1.9rem solid transparent;
+  border-bottom: 1.9rem solid transparent;
+} */
+
+/* .toolbar picture .hexagon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid var(--grey);
+  border-top: 1.9rem solid transparent;
+  border-bottom: 2rem solid transparent;
+} */
+
 /* NAVBAR */
 .navbar {
-  background: var(--lile);
+  background: #131313;
   display: flex;
   position: fixed;
   bottom: 0;
   width: 100%;
   align-items: center;
-  padding: .5rem 0;
+  z-index: 10;
 }
 
 .navbar ul {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
+  padding: 1rem 2rem;
+  max-width: 35rem;
+  margin: 0 auto;
 }
 
+/* .navbar::after {
+  content: '';
+  width: calc((100% / 4) - 1rem);
+  height: .5rem;
+  left: 2rem;
+  background: var(--logo-purple);
+  top: 0;
+  position: absolute;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+} */
+
+.navbar svg {
+  fill: transparent;
+  stroke: var(--grey);
+  stroke-width: 5rem;
+  height: 2.5rem;
+  transition: .6s all ease;
+}
+.navbar .nav-element {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-link {
+  font-weight: bold;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .6s all ease;
+}
+.nav-link span {
+  font-size: var(--s);
+}
+.nav-link:hover, .nav-link:active {
+  color: var(--logo-yellow);
+}
+.nav-link:hover svg, .nav-link:active svg {
+  stroke: var(--logo-yellow);
+}
+
+.navbar .nav-selector {
+  content: '';
+  width: calc((100% / 3) - 1rem);
+  height: .5rem;
+  background: var(--logo-purple);
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transition: .3s all ease;
+}
+
+
+/* ------------------------------------ */
+    /* MAIN PAGE STYLES */
+/* ------------------------------------ */
 /* MAIN */
 main {
-  /* padding: 2rem; */
-}
-
-/* MAIN SECTION */
-.home {
-  min-height: 100vh;
+  margin: 0 auto;
   position: relative;
 }
 
-article {
-  height: 500px;
+main::after {
+  content: '';
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: absolute;
+  background-image: url('../assets/background/Tecno-mobile.svg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
 }
-]
+main::before {
+  content: '';
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  position: absolute;
+  background: linear-gradient( rgba(255, 11, 157, 0.3), var(--dark));
+  opacity: .9;
+  z-index: -1;
+}
+
+/* ------------------------------------ */
+    /* SECTIONS STYLES FOR HOME */
+/* ------------------------------------ */
+/* HOME SECTION */
+
+.home {
+  min-height: 100vh;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  position: relative;
+  /* background-image: url('../assets/images/tecno.png'); */
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  position: relative;
+}
+
+.home picture {
+  width: 25rem;
+  max-width: 40rem;
+  justify-self: center;
+  border-radius: 100%;
+  background: var(--dark3);
+  padding: 2rem;
+  outline: 1rem solid var(--grey);
+  margin-bottom: 3rem;
+}
+
+
+.home .info {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home .info .title {
+  font-size: var(--xl);
+}
+
+
+/* ------------------------------------ */
+/* SECTOPM STYLES FOR ABOUT */
+/* ------------------------------------ */
+/* ABOUT SECTION */
+.about {
+  display: grid;
+}
+.about h3 {
+  margin-bottom: 3rem;
+}
+
+.about picture {
+  width: 25rem;
+  height: 25rem;
+  justify-self: center;
+  position: relative;
+  align-items: center;
+  /* border-radius: 100%;
+  background: var(--dark3); */
+  /* padding: 2rem; */
+  /* outline: 1rem solid var(--grey); */
+  margin-bottom: 3rem;
+}
+.about picture div {
+  height: 20rem;
+  width: 15rem;
+  top: 2.5rem;
+  left: 5rem;
+  position: absolute;
+  background: var(--dark3);
+  outline: 1rem solid var(--grey);
+}
+.about picture div::after {
+  
+}
+
+.about .social-links {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 7rem;
+  align-items: center;
+}
+
+.about .social-links .link {
+  height: 5rem;
+  width: 5rem;
+  background: var(--logo-yellow);
+  display: flex;
+  color: var(--logo-gray);
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+/* ------------------------------------ */
+/* PORTFOLIO STYLES */
+/* ------------------------------------ */
+/* PORTFOLIO */
+.portfolio .title {
+  margin-bottom: 3rem;
+  font-size: var(--xl);
+  text-align: center;
+}
+
+/* PROJECTS */
+.project {
+  max-width: 40rem;
+  background: var(--dark2);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 6px 10px 0px hsla(0,0%,0%,0.14), 
+		0px 1px 18px 0px hsla(0,0%,0%,0.12), 
+		0px 3px 5px -1px hsla(0,0%,0%,0.2);
+}
+
+.project picture {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+/* 
+.project picture .type {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1rem);
+} */
+
+/* .project picture .type .front, .project picture .type .back {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1rem;
+  margin-left: 2rem;
+  background: #199afc;
+}
+
+.project picture .type .back {
+  background: rgb(49, 0, 23);
+} */
+
+
+
+.project .project-content {
+  padding: 2rem;
+}
+
+.project .project-content .title {
+}
+
+.project .project-content .description {
+  display: flex;
+  align-items: center;
+}
+
+.project .project-content .description p {
+  width: 100%;
+  line-height: 2.4rem;
+}
+
+
+.project .tecnologies {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.project footer {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.project footer .btn:first-child {
+  margin-right: 2rem;
+}
+
+.project footer .btn {
+  height: 3rem;
+  max-width: 10rem;
+  font-size: var(--s);
+  font-family: 'baloo';
+  backdrop-filter: blur(1rem);
+}
+
+
+/* ------------------------------------ */
+/* MODAL BASIC STYLES */
+/* ------------------------------------ */
+/* MODAL */
+.modal-container {
+  position: fixed;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0,0,0, .8);
+  backdrop-filter: blur(2rem);
+  top: 0;
+  z-index: 20;
+  transition: .6s all ease;
+  visibility: hidden;
+}
+
+.modal-container.view {
+  visibility: visible;
+}
+
+/* ------------------------------------ */
+/* FOOTER STYLES */
+/* ------------------------------------ */
+/* FOOTER */
+
+body > footer {
+  margin: 0 auto;
+  padding: 7rem 2rem;
+}

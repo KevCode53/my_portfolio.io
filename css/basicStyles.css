@@ -1,0 +1,64 @@
+/* Text Basic Styles */
+
+.highlight {
+    font-size: var(--xxl);
+    font-family: 'baloo-extra';
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.title {
+    font-family: 'baloo';
+    line-height: 1;
+}
+
+.primary-btn {
+    width: 100%;
+    max-width: 25rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    font-family: 'baloo-extra';
+    font-weight: 900;
+    font-size: var(--l);
+    color: var(--logo-gray);
+    background: var(--logo-yellow);
+    border-radius: 2rem;
+    padding: 0 2rem;
+    border: .2rem solid transparent;
+    margin-bottom: 3rem;
+    box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 6px 10px 0px hsla(0,0%,0%,0.14), 
+		0px 1px 18px 0px hsla(0,0%,0%,0.12), 
+		0px 3px 5px -1px hsla(0,0%,0%,0.2);
+}
+
+.secondary-btn {
+    width: 100%;
+    max-width: 25rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    font-family: 'baloo-extra';
+    font-weight: 900;
+    font-size: var(--l);
+    border: .2rem solid var(--logo-purple);
+    color: var(--logo-white);
+    background: transparent;
+    border-radius: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 6px 10px 0px hsla(0,0%,0%,0.14), 
+		0px 1px 18px 0px hsla(0,0%,0%,0.12), 
+		0px 3px 5px -1px hsla(0,0%,0%,0.2);
+}

@@ -1,12 +1,30 @@
 :root {
-  /* Color variables */
+  /* Color Vars */
   --dark: #202020;
+  --dark2: rgb(51, 49, 59);
+  --dark3: #131313;
   --white: #f3f3f3;
-  --gray: #9c9990;
+  --grey: #E4E4E4;
   --lile: #995d81;
-  --yellow: #fde74c;
+  --yellow: #FDC57B;
   --blue: #006992;
-  /* Screen Variables */
-  max-width: 1200px;
-  min-width: 320px;
+  --teal: #535474;
+
+  /* Logo Color Vars */
+  --logo-yellow: #FCBF05;
+  --logo-purple: #7851B1;
+  --logo-gray: #464F5B;
+  --logo-white: #E8E8E8;
+
+  /* Screen Vars */
+  --max-width: 1200px;
+  --min-width: 320px;
+  
+  /* Fonts Sizes Vars */
+  --xxl: 3.6rem;
+  --xl: 2.4rem;
+  --l: 2rem;
+  --m: 1.6rem;
+  --s: 1.2rem;
+  --xs: 1rem;
 }

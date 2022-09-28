@@ -7,41 +7,133 @@
   <!-- Styles Sheets -->
   <link rel="stylesheet" href="./css/__vars.css">
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/basicStyles.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/loader.css">
   <!-- <link rel="stylesheet" href="./css/figuras/figurasTablet.css" media="(min-width: 1024px)"> -->
-  
+
+  <!-- Carga de Scripts -->
+  <script defer src="./js/loading.js"></script>
+  <script defer src="./js/index.js"></script>
+  <script defer src="./js/toolbar.js"></script>
+
+  <link rel="shortcut icon" href="./assets/icons/Logo-KP-hexagon.ico">
   <title>Kevin Palma</title>
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li>
-        <a href="">
-          <img src="" alt="">
-        </a>
-      </li>
-      <li>
-        <a href="">About me</a>
-      </li>
-      <li>
-        <a href="">Portfolio</a>
-      </li>
-      <li>
-        <a href="">Contact me</a>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="toolbar">
+      <picture>
+        <img src="./assets/svg/LogoKP.svg" alt="">
+        <!-- <span class="hexagon"></span> -->
+      </picture>
+      <button>lang</button>
+      <button>white</button>
+    </nav>
+    <nav id="nav-menu" class="navbar">
+      <ul>
+        <li class="nav-element">
+          <a href="#home-section" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <g id="home-fill"><path class="cls-1" d="M521.06,594.14H118.94a35.56,35.56,0,0,1-35.57-35.57v-321a35.58,35.58,0,0,1,13.75-28.09L298.18,53.33a35.6,35.6,0,0,1,43.64,0L542.88,209.49a35.58,35.58,0,0,1,13.75,28.09v321A35.56,35.56,0,0,1,521.06,594.14Z"/><line class="cls-2" x1="213.82" y1="512.62" x2="426.18" y2="512.62"/><line class="cls-2" x1="213.82" y1="512.62" x2="426.18" y2="512.62"/><path class="cls-1" d="M521.06,594.14H118.94a35.56,35.56,0,0,1-35.57-35.57v-321a35.58,35.58,0,0,1,13.75-28.09L298.18,53.33a35.6,35.6,0,0,1,43.64,0L542.88,209.49a35.58,35.58,0,0,1,13.75,28.09v321A35.56,35.56,0,0,1,521.06,594.14Z"/><path class="cls-3" d="M521.06,594.14H118.94a35.56,35.56,0,0,1-35.57-35.57v-321a35.58,35.58,0,0,1,13.75-28.09L298.18,53.33a35.6,35.6,0,0,1,43.64,0L542.88,209.49a35.58,35.58,0,0,1,13.75,28.09v321A35.56,35.56,0,0,1,521.06,594.14Z"/><line class="cls-2" x1="213.82" y1="512.62" x2="426.18" y2="512.62"/><line class="cls-4" x1="213.82" y1="512.62" x2="426.18" y2="512.62"/></g></svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-element">
+          <a href="#about-section" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><g id="about"><rect class="cls-1" x="44.85" y="44.98" width="550.31" height="550.31" rx="275.15"/><path class="cls-1" d="M348.17,393.35H291.83a174.7,174.7,0,0,0-133.65,62c-25.6,30.21-18.43,76.43,15,97.58A273.81,273.81,0,0,0,320,595.29h0a273.79,273.79,0,0,0,145.87-41.81A66,66,0,0,0,481,454.36,174.69,174.69,0,0,0,348.17,393.35Z"/><rect class="cls-1" x="212.86" y="131.49" width="214.29" height="214.29" rx="107.14"/></g></svg>
+            <span>Aboutme</span>
+          </a>
+        </li>
+        <li class="nav-element">
+          <a href="#portfolio-section" class="nav-link">
+            <svg id="portfolio" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path class="cls-1" d="M594.47,182.21l-268.37,122a6.66,6.66,0,0,1-5.46,0l-275-122a6.68,6.68,0,0,1,0-12.21L320.65,49a6.67,6.67,0,0,1,5.43,0L594.45,170.06A6.67,6.67,0,0,1,594.47,182.21Z"/><path class="cls-1" d="M594.45,313.47,449.53,248.09,356,290.62a79.69,79.69,0,0,1-65.29.3l-96.58-42.83L45.6,313.45a6.67,6.67,0,0,0,0,12.2L295.73,436.58a67.33,67.33,0,0,0,55.17-.25l243.57-110.7A6.68,6.68,0,0,0,594.45,313.47Z"/><path class="cls-1" d="M594.45,460.57l-149-67.22L326.1,447.6a6.66,6.66,0,0,1-5.46,0l-122.4-54.28L45.6,460.54a6.68,6.68,0,0,0,0,12.21L288.5,580.47a85,85,0,0,0,69.6-.32L594.47,472.72A6.67,6.67,0,0,0,594.45,460.57Z"/></svg>
+            <span>Portfolio</span>
+          </a>
+        <!-- </li>
+        <li class="nav-element">
+          <a href="#contact-section" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><defs></defs><g id="contact"><path class="cls-1" d="M333.65,460.82,268,517.94c-12.67,11-32-1.06-27.55-17.27l15.22-56a17,17,0,0,1,23.09-11.17L440.7,502.9a17,17,0,0,0,22.56-9.54L598.35,140.91a17,17,0,0,0-21.08-22.25l-525,169.23a17,17,0,0,0-3.21,30.92l108.1,61.78a17,17,0,0,1,7.64,9.23L195,477.63"/><path class="cls-1" d="M161.23,383.83,565.64,135.66c5.16-3.16,10.43,3.86,6,7.93L259.38,437.8"/></g></svg>
+            <span>Contactme</span>
+          </a>
+        </li> -->
+        <li class="nav-selector"></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <section class="home">
-      <h1>Kevin Palma</h1>
+
+    <section id="home-section" class="home">
+      <picture>
+        <img src="./assets/svg/LogoKP.svg" alt="">
+      </picture>
+
+      <div class="info">
+        <h1 class="highlight">Kevin Palma</h1>
+        <h3 class="title">Ingeniero de Software</h3>
+      </div>
+
+      <button class="primary-btn">
+        Download CV
+      </button>
+
+
     </section>
-    <section class="portfolio">
-      <article>
-        <header>
-          <h3>Conext</h3>
-        </header>
-        <div class=""></div>
-        <footer>somthing</footer>
+
+    <section id="about-section" class="about">
+      <h3 class="title">Aboutme</h3>
+
+      <picture>
+        <div></div>
+      </picture>
+
+      <ul class="social-links">
+        <li class="link-element">
+          <a class="link" href="">In</a>
+        </li>
+        <li class="link-element">
+          <a class="link" href="">Git</a>
+        </li>
+        <li class="link-element">
+          <a class="link" href="">Yout</a>
+        </li>
+        <li class="link-element">
+          <a class="link" href="">Yout</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="portfolio-section" class="portfolio">
+      <h2 class="title">Portfolio</h2>
+      <article class="project">
+        <picture class="project-image">
+          <div class="type">
+            <div class="front"></div>
+            <div class="back"></div>
+          </div>
+          <img src="./assets/images/Invitacion.png" alt="">
+        </picture>
+        <div class="project-content">
+          <h3 class="title">
+            Birthday Invitation
+          </h3>
+          <div class="description">
+            <p>Web page made with the basic pillars of web development, its functionality being a birthday invitation, design inspired by the ticket made by 
+              <a style="color: #199afc; display: inline-block; height: 1.4rem;" href="https://midu.dev/" target="_blank">
+                <img style="height: 2rem; width: auto;" src="https://midu.dev/logo-dark.png" alt="Midudev">
+              </a> 
+            for the <a style="font-weight: bold;" href="https://miduconf.com/" target="_blank">#miduConf</a> of 2022</p>
+          </div>
+          <ul class="tecnologies">
+            <li class="element">html5</li>
+            <li class="element">CSS3</li>
+            <li class="element">JS</li>
+          </ul>
+        </div>
+        <footer>
+          <a class="primary-btn btn" href="https://kevcode53.github.io/invitation-card.io/" target="_blank">Demo</a>
+          <a class="secondary-btn btn" href="https://github.com/KevCode53/invitation-card.io" target="_blank">Github</a>
+        </footer>
       </article>
       <article>
         <header>
@@ -66,7 +158,11 @@
       </article>
     </section>
   </main>
-  <footer>
+  <div class="modal-container">
+    <div class="modal">
+    </div>
+  </div>
+  <footer id="contact-section">
     <ul>
       <li>
         <a href="">Linkedin</a>
