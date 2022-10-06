@@ -241,7 +241,7 @@ main::before {
 
 
 /* ------------------------------------ */
-/* SECTOPM STYLES FOR ABOUT */
+/* SECTION STYLES FOR ABOUT */
 /* ------------------------------------ */
 /* ABOUT SECTION */
 .about {
@@ -302,15 +302,29 @@ main::before {
 /* PORTFOLIO STYLES */
 /* ------------------------------------ */
 /* PORTFOLIO */
+
 .portfolio .title {
   margin-bottom: 3rem;
   font-size: var(--xl);
   text-align: center;
 }
 
+.projects-container {
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      30rem,
+      1fr
+    )
+  );
+  gap: 3rem;
+}
+
 /* PROJECTS */
 .project {
-  max-width: 40rem;
+  /* max-width: 40rem; */
   background: var(--dark2);
   border-radius: 1rem;
   margin-bottom: 3rem;
